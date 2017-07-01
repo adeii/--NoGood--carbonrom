@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com" />
-
-
   <remote  name="carbon"
           fetch="git://github.com/"
           review="review.carbonrom.org"
           revision="refs/heads/cr-4.0"
-          sync-j="8" />
+          sync-j="4" />
 
   <remote  name="gh"
            fetch="git://github.com/"
@@ -48,8 +44,7 @@
      <project path="hardware/atheros/wlan" name="CM13-Y300/android_hardware_atheros_wlan" remote="github" revision="cm-13.0" />
 
      <!-- GPS -->
-     <remove-project name="SlimRoms/hardware_qcom_gps" />
-     <project path="hardware/qcom/gps" name="CM13-Y300/android_hardware_qcom_gps" remote="github" revision="cm-13.0" />
+      <project path="hardware/qcom/gps" name="CM13-Y300/android_hardware_qcom_gps" remote="github" revision="cm-13.0" />
 
      <!-- QCOM Hardware -->
      <project path="hardware/qcom/display-caf/msm7x27a" name="CM13-Y300/android_hardware_qcom_display-caf" remote="github" revision="cm-13.0" />
@@ -71,7 +66,7 @@
   <project path="hardware/qcom/audio/default" name="CarbonROM/android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="carbon" />
   <project path="hardware/qcom/display" name="CarbonROM/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="carbon" />
   <project path="hardware/qcom/camera" name="CarbonROM/android_hardware_qcom_camera" groups="qcom,qcom_camera" remote="carbon" />
-  <project path="hardware/qcom/gps" name="CarbonROM/android_hardware_qcom_gps" groups="qcom,qcom_gps" remote="carbon" />
+  <!--project path="hardware/qcom/gps" name="CarbonROM/android_hardware_qcom_gps" groups="qcom,qcom_gps" remote="carbon" /-->
   <project path="hardware/qcom/keymaster" name="CarbonROM/android_hardware_qcom_keymaster" groups="qcom,qcom_keymaster" remote="carbon" />
   <project path="hardware/qcom/media/default" name="CarbonROM/android_hardware_qcom_media" groups="qcom" remote="carbon" />
   <project path="hardware/ril" name="CarbonROM/android_hardware_ril" groups="pdk" remote="carbon" />
