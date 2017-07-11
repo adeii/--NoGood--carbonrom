@@ -17,7 +17,9 @@
            fetch="git://github.com/"
            sync-c="true"
            sync-j="4" />
-
+  
+  <remote name="bucket" fetch="https://bitbucket.org" revision="master" />
+  
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
@@ -42,14 +44,15 @@
      <!-- WIFI -->
      <project path="hardware/atheros/wifi/ath6kl-huawei" name="SlimLP-Y300/android_hardware_atheros_wifi_ath6kl-huawei" remote="github" revision="master" />
      <project path="hardware/atheros/wlan" name="CM13-Y300/android_hardware_atheros_wlan" remote="github" revision="cm-13.0" />
-
+     <project path="hardware/qcom/bt-caf" name="LineageOS/android_hardware_qcom_bt" groups="qcom" remote="github" revision="cm-13.0-caf" />
+       
      <!-- GPS -->
       <project path="hardware/qcom/gps" name="CM13-Y300/android_hardware_qcom_gps" remote="github" revision="cm-13.0" />
 
      <!-- QCOM Hardware -->
      <project path="hardware/qcom/display-caf/msm7x27a" name="CM13-Y300/android_hardware_qcom_display-caf" remote="github" revision="cm-13.0" />
      <project path="hardware/qcom/media-caf/msm7x27a" name="SlimLP-Y300/hardware_qcom_media" remote="github" revision="lp5.1" />
-
+     <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="UBERTC/arm-eabi-4.9" groups="pdk,linux,arm" remote="bucket"/>
      <!-- Stlport -->
      <project path="external/stlport" name="SlimRoms/android_external_stlport" remote="github" revision="mm6.0" />
   <project path="device/qcom/common" name="CarbonROM/android_device_qcom_common" remote="carbon" />
@@ -62,7 +65,8 @@
   <project path="frameworks/native" name="CarbonROM/android_frameworks_native" groups="pdk" remote="carbon" />
   <project path="frameworks/opt/net/ims" name="CarbonROM/android_frameworks_opt_net_ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" remote="carbon" />
   <project path="hardware/broadcom/libbt" name="CarbonROM/android_hardware_broadcom_libbt" groups="pdk" remote="carbon" />
-  <project path="hardware/libhardware" name="CarbonROM/android_hardware_libhardware" groups="pdk" remote="carbon" />
+  <!--project path="hardware/libhardware" name="CarbonROM/android_hardware_libhardware" groups="pdk" remote="carbon" /-->
+  <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" groups="pdk" remote="github" revision="cm-13.0" />
   <project path="hardware/qcom/audio/default" name="CarbonROM/android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="carbon" />
   <project path="hardware/qcom/display" name="CarbonROM/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="carbon" />
   <project path="hardware/qcom/camera" name="CarbonROM/android_hardware_qcom_camera" groups="qcom,qcom_camera" remote="carbon" />
@@ -70,7 +74,7 @@
   <project path="hardware/qcom/keymaster" name="CarbonROM/android_hardware_qcom_keymaster" groups="qcom,qcom_keymaster" remote="carbon" />
   <project path="hardware/qcom/media/default" name="CarbonROM/android_hardware_qcom_media" groups="qcom" remote="carbon" />
   <project path="hardware/ril" name="CarbonROM/android_hardware_ril" groups="pdk" remote="carbon" />
-  <project path="packages/apps/Bluetooth" name="CarbonROM/android_packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="carbon" />
+  <project path="packages/apps/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="github" revision="cm-13.0" />
   <project path="packages/apps/CarbonFibers" name="CarbonROM/android_packages_apps_CarbonFibers" remote="carbon" />
   <project path="packages/apps/Nfc" name="CarbonROM/android_packages_apps_Nfc" groups="pdk-fs" remote="carbon" />
   <project path="packages/apps/Settings" name="CarbonROM/android_packages_apps_Settings" groups="pdk-fs" remote="carbon" />
@@ -370,11 +374,13 @@
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs,pdk-fs" />
   <project path="hardware/akm" name="platform/hardware/akm" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="pdk,broadcom_wlan" />
-  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
+ <!--project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" /-->
+  <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" groups="pdk" remote="github" revision="cm-13.0" />                        
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt" />
   <project path="hardware/mediatek" name="platform/hardware/mediatek" groups="mediatek,mediatek_wear" />
   <project path="hardware/nvidia/audio" name="platform/hardware/nvidia/audio" groups="nvidia_audio" />
-  <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
+ <!--project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" /-->
+  <project path="hardware/qcom/bt" name="LineageOS/android_hardware_qcom_bt" groups="qcom" remote="github" revision="cm-13.0" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
   <project path="hardware/qcom/msm8994" name="platform/hardware/qcom/msm8994" groups="qcom_msm8994" />
   <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" groups="qcom" />
@@ -461,7 +467,7 @@
   <project path="prebuilts/eclipse-build-deps" name="platform/prebuilts/eclipse-build-deps" groups="notdefault,eclipse" />
   <project path="prebuilts/eclipse-build-deps-sources" name="platform/prebuilts/eclipse-build-deps-sources" groups="notdefault,eclipse" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8-old" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" groups="pdk,linux,arm" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="pdk,linux" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8"  groups="pdk,linux" />
@@ -477,7 +483,8 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" />
-  <project path="system/bt" name="platform/system/bt" groups="pdk" />
+ <!--project path="system/bt" name="platform/system/bt" groups="pdk" /-->
+  <project path="system/bt" name="LineageOS/android_system_bt" groups="pdk" remote="github" revision="cm-13.0"/> 
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
